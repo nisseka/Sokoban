@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="UTF-8">
+        <title>Sokoban</title>
+        <link rel="stylesheet" href="StyleSheet1.css">
+    </head>
+    <body>
+        <header>
+            <h1 id="TopLeftHeaderCell">Sokoban</h1>
+        </header>
+        <main>
+            <div id="Map"></div>
+            <aside>
+                <div id="PlayerStatsPanel">
+                    <h3 class="TitleText">Player Stats:</h3>
+                    <p id="BlocksRemaining">Crates remaining: 12</p>
+                    <p id="NumberOfMovesUsed">Moves: 12</p>
+                    <p id="TimeElapsed">Time elapsed: 0m 0s</p>
+                    <input id="RestartButton" type="button" value="Restart" onclick="window.location.reload();">
+                </div>
+                <div id="ObjectivesPanel">
+                    <h3 class="TitleText">Objectives:</h3>
+                    <p>Your objective is to move all the crates to the goal area using as few moves as possible.</p>
+                    <p><img class="ObjectivesPanelImages" src="Images/BlockTile.gif">: A crate</p>
+                    <p><img class="ObjectivesPanelImages" src="Images/GoalTile.gif">: Goal area</p>
+                    <p><img class="ObjectivesPanelImages" src="Images/Player.gif">: Player</p>
+                    <p><img class="ObjectivesPanelImages ArrowKeysImage" src="Images/Arrow keys.png"> Use these to move around</p>
+                    <p><img class="ObjectivesPanelImages ArrowKeysImage" src="Images/WASD keys.png"> or these</p>
+                    
+                </div>
+            </aside>
+        </main>
+        <footer>
+            <h3>&copy; Stefan Sundbeck</h3>
+        </footer>
+<!--
+    MapCompletedAlertBox
+    normally hidden
+-->
+        <div id="MapCompletedAlertBox">
+           <h2 class="TitleText2">Congratulations!</h2>
+           <p>You completed the map!</p>
+           <p id="MapCompletedAlertBox_NumberOfMovesUsed">Number of moves used: 0</p>
+           <p id="MapCompletedAlertBox_TimeUsed">Time elapsed: 0m 0s</p>
+           <input id="MapCompletedAlertBox_OKButton" type="button" value="OK" onclick="MapCompletedAlertBox_OKButtonClick();">
+        </div>
+    </body>
+    <script src="SokobanBase.js"></script>
+    <script src="Javascript.js"></script>
+</html>
